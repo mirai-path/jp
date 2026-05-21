@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mirai Path — A premium Japan-focused learning & career roadmap platform designed specifically for CSE students preparing for scholarships, Masters, and global tech opportunities.">
+  <meta name="keywords" content="Japan, CSE Roadmap, MEXT Scholarship, Masters Japan, Tokyo Tech Jobs, coding roadmap, Japanese language learning, international student">
+  <meta name="author" content="Mirai Path Team">
+  <title>Mirai Path | Your Path To The Future 🌸</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Icons (Phosphor Icons CDN) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Floating Sakura Particle Canvas -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- --- HEADER / NAVBAR --- -->
+  <header>
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <img src="assets/images/logo.png" alt="Mirai Path Logo">
+        <span>Mirai Path</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li><a href="#japan-guide" class="nav-link">Japan Guide</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+        <li><a href="#progress" class="nav-link">My Progress</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+      </ul>
+
+      <!-- Navbar Control Elements -->
+      <div class="nav-controls">
+        <!-- Sakura Toggle -->
+        <button class="sakura-toggle-btn" id="sakura-toggle" title="Toggle Sakura Petals">
+          <i class="ph-fill ph-flower"></i>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <!-- Mobile Drawer Toggler -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- MOBILE NAV MENU DRAWER --- -->
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-menu">
+    <div class="mobile-nav-header">
+      <a href="#hero" class="logo">
+        <img src="assets/images/logo.png" alt="Mirai Path Logo">
+        <span>Mirai Path</span>
+      </a>
+      <button class="mobile-close-btn" id="mobile-close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
+      <li><a href="#features" class="mobile-nav-link">Features</a></li>
+      <li><a href="#roadmap" class="mobile-nav-link">Roadmap</a></li>
+      <li><a href="#japan-guide" class="mobile-nav-link">Japan Guide</a></li>
+      <li><a href="#resources" class="mobile-nav-link">Resources</a></li>
+      <li><a href="#progress" class="mobile-nav-link">My Progress</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+    </ul>
+  </div>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <i class="ph-bold ph-sparkle"></i>
+          <span>Specially designed for CSE Students</span>
+        </div>
+        <h1>Build Skills.<br>Prepare for Japan.<br><span class="gradient-text">Create Your Future.</span></h1>
+        <p>Mirai Path is your premium interactive portal to conquer international scholarships, master the Japanese language, refine core computer science skills, and construct an elite tech career in Japan.</p>
+        <div class="hero-buttons">
+          <a href="#roadmap" class="btn btn-primary">Start Learning <i class="ph-bold ph-caret-right"></i></a>
+          <a href="#japan-guide" class="btn btn-secondary">Explore MEXT Guide</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Learning Nodes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">MEXT</span>
+            <span class="stat-label">Detailed Guide</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Student Focused</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-image-container glass-panel">
+          <img src="assets/images/banner.png" alt="Japan Career Path Illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FEATURES SECTION --- -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">機能の特徴</span>
+          Everything You Need to Succeed
+        </h2>
+        <p>A holistic approach combining global tech practices with precise cultural training to bridge the gap between academic education and international recruitment.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-graduation-cap"></i>
+          </div>
+          <h3>Learn Skills</h3>
+          <p>Master English fundamentals, standard communication, and key tech stack specifications required to shine in global screening interviews.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-flag"></i>
+          </div>
+          <h3>Japan Preparation</h3>
+          <p>Demystify visa categories, the local tech market, corporate culture, standard lifestyles, and typical cost of living estimations.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-certificate"></i>
+          </div>
+          <h3>Scholarship Guidance</h3>
+          <p>Receive systematic application timelines for MEXT (embassy/university tracks) and premier graduate school research criteria.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-map-trifold"></i>
+          </div>
+          <h3>Coding Roadmaps</h3>
+          <p>Targeted pathways spanning algorithmic structures, Linux commands, Git commands, cloud storage, and responsive web systems.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-database"></i>
+          </div>
+          <h3>Resource Collections</h3>
+          <p>Curated channels, recommended handbooks, online repositories, and problem-solving channels to cut out the search noise.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="feature-card glass-panel reveal">
+          <div class="feature-icon">
+            <i class="ph-bold ph-chart-line-up"></i>
+          </div>
+          <h3>Career Growth</h3>
+          <p>Craft custom English-Japanese resumes, create impactful portfolio landing pages, and master active job portal search dynamics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- INTERACTIVE LEARNING ROADMAP SECTION --- -->
+  <section class="roadmap" id="roadmap">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">学習ロードマップ</span>
+          Interactive Learning Roadmap
+        </h2>
+        <p>A step-by-step master plan designed for CSE students. Click on any roadmap node below to view details, track your progress, and check off learning milestones.</p>
+      </div>
+
+      <div class="roadmap-container">
+        <!-- Rendered dynamically by roadmap.js -->
+        <div class="roadmap-path" id="roadmap-path"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- ROADMAP INTERACTIVE SLIDING DRAWER --- -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer" id="roadmap-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i id="drawer-node-icon" class="ph-bold ph-code"></i>
+        <h3 id="drawer-node-title">Node Title</h3>
+      </div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close details">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
+    
+    <div class="drawer-content">
+      <!-- Status Track Selector -->
+      <div class="drawer-section">
+        <h4>Set Status</h4>
+        <div class="status-selector">
+          <div class="status-btn" data-status="planned">Planned</div>
+          <div class="status-btn" data-status="learning">Learning</div>
+          <div class="status-btn" data-status="completed">Completed</div>
+        </div>
+      </div>
+
+      <!-- Why learn this -->
+      <div class="drawer-section">
+        <h4>Why learn it?</h4>
+        <p id="drawer-why">Detailed description on why this module is important for CSE students planning a career in Japan.</p>
+      </div>
+
+      <!-- Level & Time -->
+      <div class="drawer-section" style="display: flex; gap: 24px;">
+        <div>
+          <h4>Level</h4>
+          <p id="drawer-level" style="font-weight: 600; color: var(--accent-pink-hover);"></p>
+        </div>
+        <div>
+          <h4>Est. Time</h4>
+          <p id="drawer-time" style="font-weight: 600;"></p>
+        </div>
+      </div>
+
+      <!-- Topic Checklists -->
+      <div class="drawer-section">
+        <h4>What to learn</h4>
+        <div class="checklist-container" id="drawer-checklist">
+          <!-- Populated by roadmap.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- JAPAN GUIDE TIMELINE SECTION --- -->
+  <section class="japan-guide" id="japan-guide">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">日本留学・就職ガイド</span>
+          Japan Career Guide
+        </h2>
+        <p>An administrative blueprint. Discover scholarship pathways, student visa requirements, local living budgets, and essential pre-departure checklists.</p>
+      </div>
+
+      <!-- Tabs Controls -->
+      <div class="guide-tabs reveal">
+        <button class="tab-btn active" data-tab="tab-mext">MEXT Scholarship Timeline</button>
+        <button class="tab-btn" data-tab="tab-visa">Masters & Student Visa</button>
+        <button class="tab-btn" data-tab="tab-budget">Cost of Living</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="guide-content reveal">
+        
+        <!-- Tab 1: MEXT Scholarship -->
+        <div class="tab-pane active" id="tab-mext">
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-card glass-panel">
+                <span class="step-number">Step 01: April - May</span>
+                <h3>Official Circular Release</h3>
+                <p>The Ministry of Education, Culture, Sports, Science and Technology (MEXT) launches the official application circular. Prepare your academic scripts, letters of recommendation, IELTS transcripts, and preliminary research abstracts.</p>
+              </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-card glass-panel">
+                <span class="step-number">Step 02: June - July</span>
+                <h3>Primary Screening</h3>
+                <p>The local Japanese Embassy reviews the documents. Shortlisted applicants undergo standard written screening tests (including rigorous English and Japanese tests) and a panel interview.</p>
+              </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-card glass-panel">
+                <span class="step-number">Step 03: August - September</span>
+                <h3>University Acceptance</h3>
+                <p>Passing Embassy candidates must actively contact professors in top Japanese national universities (e.g., Tokyo University, Tokyo Tech, Kyoto University) to secure a formal Letter of Provisional Acceptance.</p>
+              </div>
+            </div>
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-card glass-panel">
+                <span class="step-number">Step 04: October - February</span>
+                <h3>Secondary Screening</h3>
+                <p>MEXT head offices in Tokyo perform the final review of recommended applicants. Upon positive selection, university placements and official award letters are dispatched.</p>
+              </div>
+            </div>
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-card glass-panel">
+                <span class="step-number">Step 05: April</span>
+                <h3>Departure to Japan</h3>
+                <p>Secure the special student visa at your embassy, book MEXT-sponsored flights, and land in Japan to begin your research/language course!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Masters & Student Visa -->
+        <div class="tab-pane" id="tab-visa">
+          <div class="guide-grid">
+            <div class="guide-info-card glass-panel">
+              <h3><i class="ph ph-scroll"></i> Essential Documents</h3>
+              <ul>
+                <li><strong>Academic Degree Certificates:</strong> Valid Bachelor transcripts and certificate translations.</li>
+                <li><strong>Standardized English Scores:</strong> Verified IELTS (band 6.5+) or TOEFL certificates.</li>
+                <li><strong>Research Proposal:</strong> A 2-page detailed technical breakdown of your graduate topic.</li>
+                <li><strong>Recommendation Letters:</strong> Minimum of two references signed by professors or company tech leads.</li>
+                <li><strong>Certificate of Eligibility (COE):</strong> Dispatched by your chosen Japanese school to activate visa steps.</li>
+              </ul>
+            </div>
+            <div class="guide-info-card glass-panel">
+              <h3><i class="ph ph-passport"></i> Visa & Enrollment Steps</h3>
+              <ul>
+                <li><strong>Contacting Professors:</strong> Find professors matching your exact field. Write a highly tailored email summarizing your research proposal and project portfolios.</li>
+                <li><strong>Entrance Examinations:</strong> Preparing for university-specific math, programming, or physics entrance papers (often conducted in English).</li>
+                <li><strong>Embassy Submission:</strong> Handing over the official COE, passport, photographs, and university acceptance letters to the Embassy of Japan.</li>
+                <li><strong>Scholarship backup:</strong> In case MEXT is missed, prepare applications for private foundation scholarships (e.g., Rotary Yoneyama, Honjo Foundation).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Cost of Living -->
+        <div class="tab-pane" id="tab-budget">
+          <div class="guide-grid">
+            <div class="guide-info-card glass-panel">
+              <h3><i class="ph ph-wallet"></i> Monthly Expenses (Est.)</h3>
+              <ul>
+                <li><strong>Rent (Dormitory/Apartment):</strong> ¥35,000 - ¥70,000 (Tokyo averages are higher, regional campuses are very cost-effective).</li>
+                <li><strong>Food & Groceries:</strong> ¥30,000 - ¥40,000 (cooking at home is extremely affordable).</li>
+                <li><strong>Utilities (Gas, Water, Power):</strong> ¥8,000 - ¥12,000.</li>
+                <li><strong>Mobile Data & High-speed Internet:</strong> ¥4,000 - ¥6,000.</li>
+                <li><strong>National Health Insurance (NHI):</strong> ¥1,500 - ¥3,000 (huge student discount).</li>
+                <li><strong>Local Transport:</strong> ¥5,000 - ¥10,000 (fully covered by student rail cards).</li>
+              </ul>
+            </div>
+            <div class="guide-info-card glass-panel">
+              <h3><i class="ph ph-hand-coins"></i> Financial Strategies</h3>
+              <ul>
+                <li><strong>MEXT Allowance:</strong> MEXT researchers receive ¥143,000 - ¥145,000 per month, which fully covers tuition, housing, and savings!</li>
+                <li><strong>Part-time Work (Arubaito):</strong> The student visa allows up to 28 hours of work per week. High-paying English teaching or tech freelancing yields ¥1,200 - ¥2,500 per hour.</li>
+                <li><strong>TA & RA Positions:</strong> Serve as a Teaching Assistant or Research Assistant inside your laboratory for additional hourly university payouts.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- RESOURCE HUB SECTION --- -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">リソースハブ</span>
+          Curated Resource Hub
+        </h2>
+        <p>Save hours of search. Instantly explore our handpicked list of YouTube channels, standard books, documentation, and mock coding tests.</p>
+      </div>
+
+      <!-- Realtime Search bar -->
+      <div class="search-wrapper reveal">
+        <i class="ph ph-magnifying-glass"></i>
+        <input type="text" id="resource-search" placeholder="Search resources (e.g. JLPT, Web Dev, MEXT)...">
+      </div>
+
+      <!-- Filter Badges -->
+      <div class="hub-filters reveal" id="hub-filters">
+        <button class="tab-btn active" data-filter="all">All Resources</button>
+        <button class="tab-btn" data-filter="youtube">YouTube Channels</button>
+        <button class="tab-btn" data-filter="courses">Free Courses</button>
+        <button class="tab-btn" data-filter="books">Recommended Books</button>
+        <button class="tab-btn" data-filter="websites">Portals & Blogs</button>
+        <button class="tab-btn" data-filter="practice">Practice Tests</button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="resource-grid reveal" id="resource-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- --- DYNAMIC MY PROGRESS SECTION --- -->
+  <section class="progress" id="progress">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">自分の進捗</span>
+          My Progress Dashboard
+        </h2>
+        <p>A persistent, live tracking widget showing your overall preparedness. Synchronizes automatically when you update your learning status inside the roadmap above.</p>
+      </div>
+
+      <div class="progress-grid reveal">
+        <!-- Circular progress indicator -->
+        <div class="progress-stats-card glass-panel">
+          <div class="progress-ring-container">
+            <svg class="progress-ring" width="160" height="160">
+              <circle class="progress-ring__circle-bg" stroke="var(--border-color)" stroke-width="8" fill="transparent" r="70" cx="80" cy="80" />
+              <circle class="progress-ring__circle" stroke="var(--accent-red)" stroke-dasharray="439.82 439.82" stroke-dashoffset="439.82" stroke-width="8" stroke-linecap="round" fill="transparent" r="70" cx="80" cy="80" />
+            </svg>
+            <div class="progress-percentage" id="progress-percentage">0%</div>
+          </div>
+          <h3>Preparedness Index</h3>
+          <p style="font-size: 0.95rem; margin-top: 6px;">Total roadmap completion status</p>
+          
+          <div class="progress-summary">
+            <div class="summary-stat">
+              <span class="summary-val" id="completed-count" style="color: #2ecc71;">0</span>
+              <span class="summary-lbl">Done</span>
+            </div>
+            <div class="summary-stat">
+              <span class="summary-val" id="learning-count" style="color: #f39c12;">0</span>
+              <span class="summary-lbl">Learning</span>
+            </div>
+            <div class="summary-stat">
+              <span class="summary-val" id="planned-count" style="color: var(--accent-pink-hover);">0</span>
+              <span class="summary-lbl">Planned</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active learning modules checkmark lists -->
+        <div class="progress-details-card glass-panel">
+          <h3>Your Study Board</h3>
+          <div class="active-modules-list" id="active-modules-list">
+            <!-- Rendered by roadmap.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- PROJECT SHOWCASE SECTION --- -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>
+          <span class="japanese-sub">プロジェクト紹介</span>
+          Student Project Showcase
+        </h2>
+        <p>A reference portfolio. Explore technical project archetypes built by CSE students. Get ideas to formulate your academic portfolios for professors or employers.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="showcase-filters reveal">
+        <button class="tab-btn active" data-filter="all">All Projects</button>
+        <button class="tab-btn" data-filter="web">Web Apps</button>
+        <button class="tab-btn" data-filter="c">C Projects</button>
+        <button class="tab-btn" data-filter="python">Python Tools</button>
+        <button class="tab-btn" data-filter="firebase">Firebase Apps</button>
+        <button class="tab-btn" data-filter="ai">AI Mini Tools</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="showcase-grid reveal">
+        <!-- Project 1 -->
+        <div class="project-card glass-panel reveal" data-category="web">
+          <div class="project-image-box">
+            <i class="ph-bold ph-globe" style="font-size: 3rem; opacity: 0.3;"></i>
+            <div class="project-overlay">
+              <span style="color:#fff; font-weight:600;">View Portfolio Blueprint</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS Grid</span>
+              <span class="project-tag">Vanilla JS</span>
+            </div>
+            <h3>Responsive Career Portfolio</h3>
+            <p>A premium developer portfolio featuring smooth scroll anims, custom terminal interface elements, and deep Japanese translation switchers.</p>
+            <div class="project-footer">
+              <div class="project-author">
+                <span class="project-author-icon">S</span>
+                <span>Sub-module</span>
+              </div>
+              <a href="https://github.com" target="_blank" class="project-code-link">
+                Source Code <i class="ph ph-github-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-panel reveal" data-category="c">
+          <div class="project-image-box">
+            <i class="ph-bold ph-terminal-window" style="font-size: 3rem; opacity: 0.3;"></i>
+            <div class="project-overlay">
+              <span style="color:#fff; font-weight:600;">View CLI Simulator</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">C Language</span>
+              <span class="project-tag">Memory Pointers</span>
+              <span class="project-tag">System CLI</span>
+            </div>
+            <h3>Custom File System Simulator</h3>
+            <p>A complete command-line interface mimicking Unix-like file directories, using raw memory allocations, structures, and pointer math in C.</p>
+            <div class="project-footer">
+              <div class="project-author">
+                <span class="project-author-icon">C</span>
+                <span>Core Module</span>
+              </div>
+              <a href="https://github.com" target="_blank" class="project-code-link">
+                Source Code <i class="ph ph-github-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-panel reveal" data-category="python">
+          <div class="project-image-box">
+            <i class="ph-bold ph-file-pdf" style="font-size: 3rem; opacity: 0.3;"></i>
+            <div class="project-overlay">
+              <span style="color:#fff; font-weight:600;">View Automation Blueprint</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Python 3</span>
+              <span class="project-tag">BeautifulSoup</span>
+              <span class="project-tag">Automations</span>
+            </div>
+            <h3>Japan Dev Job Finder Bot</h3>
+            <p>A lightweight automated web scrapper crawling Tokyodev and JapanDev. Compiles fresh new English-friendly entry-level jobs into spreadsheets weekly.</p>
+            <div class="project-footer">
+              <div class="project-author">
+                <span class="project-author-icon">P</span>
+                <span>Python Utility</span>
+              </div>
+              <a href="https://github.com" target="_blank" class="project-code-link">
+                Source Code <i class="ph ph-github-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-panel reveal" data-category="firebase">
+          <div class="project-image-box">
+            <i class="ph-bold ph-chats" style="font-size: 3rem; opacity: 0.3;"></i>
+            <div class="project-overlay">
+              <span style="color:#fff; font-weight:600;">View Firestore Live chat</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Firebase Auth</span>
+              <span class="project-tag">Firestore DB</span>
+              <span class="project-tag">Real-time JS</span>
+            </div>
+            <h3>Nihongo Study Chatroom</h3>
+            <p>A serverless real-time web application where students log in with Google Auth to practice typing Japanese in specialized chat rooms.</p>
+            <div class="project-footer">
+              <div class="project-author">
+                <span class="project-author-icon">F</span>
+                <span>Firebase Module</span>
+              </div>
+              <a href="https://github.com" target="_blank" class="project-code-link">
+                Source Code <i class="ph ph-github-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-panel reveal" data-category="ai">
+          <div class="project-image-box">
+            <i class="ph-bold ph-cpu" style="font-size: 3rem; opacity: 0.3;"></i>
+            <div class="project-overlay">
+              <span style="color:#fff; font-weight:600;">View Mini AI tool</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">HuggingFace API</span>
+              <span class="project-tag">Transformer Models</span>
+              <span class="project-tag">Python API</span>
+            </div>
+            <h3>Japanese Research Abstract Summarizer</h3>
+            <p>A lightweight web API using an open source neural summarization engine. Refines dense research drafts into neat, readable MEXT abstracts.</p>
+            <div class="project-footer">
+              <div class="project-author">
+                <span class="project-author-icon">A</span>
+                <span>AI Module</span>
+              </div>
+              <a href="https://github.com" target="_blank" class="project-code-link">
+                Source Code <i class="ph ph-github-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- COMMUNITY SECTION --- -->
+  <section class="community" id="community">
+    <div class="container reveal">
+      <div class="community-card glass-panel">
+        <div class="community-content">
+          <i class="ph-bold ph-users-three community-icon"></i>
+          <h2>Learn Together, Fly Together 🌸</h2>
+          <p>Join a passionate, dedicated community of CSE scholars preparing for Japan. Team up for programming contests, critique each other's research proposals, solve JLPT quizzes, and review portfolio profiles in real time.</p>
+          <a href="https://www.facebook.com/share/g/18uD325P7w/" target="_blank" class="btn btn-primary">Join Facebook Community <i class="ph-bold ph-facebook-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="#hero" class="logo">
+            <img src="assets/images/logo.png" alt="Mirai Path Logo">
+            <span>Mirai Path</span>
+          </a>
+          <p>A modern static Japan-focused career platform designed to help CSE students prepare for MEXT scholarships, Masters programs, and Tokyo tech opportunities.</p>
+          <div class="footer-socials">
+            <!-- 🔗 GITHUB PROFILE LINK -->
+            <a href="https://github.com/mirai-path" target="_blank" class="social-link" title="GitHub"><i class="ph ph-github-logo"></i></a>
+            
+            <!-- 🔗 LINKEDIN PROFILE LINK PLACEHOLDER -->
+            <!-- To add your LinkedIn, replace the "#" below with your link (e.g. "https://linkedin.com/in/yourusername") -->
+            <a href="#" target="_blank" class="social-link" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            
+            <a href="https://www.facebook.com/share/g/18uD325P7w/" target="_blank" class="social-link" title="Facebook Group"><i class="ph ph-facebook-logo"></i></a>
+          </div>
+
+          <!-- ✉️ EMAIL CONTACT DETAILS -->
+          <div class="footer-contact" style="align-items: flex-start;">
+            <i class="ph ph-envelope-simple" style="margin-top: 3px;"></i>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <a href="mailto:miraipath.jp@gmail.com" class="footer-email-link">miraipath.jp@gmail.com</a>
+              <a href="mailto:maraipath@gmail.com" class="footer-email-link">maraipath@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#roadmap">Learning Roadmap</a></li>
+            <li><a href="#japan-guide">Japan Career Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3>Hub Collections</h3>
+          <ul>
+            <li><a href="#resources">Resource Hub</a></li>
+            <li><a href="#progress">My Progress</a></li>
+            <li><a href="#projects">Project Showcase</a></li>
+            <li><a href="https://www.facebook.com/share/g/18uD325P7w/" target="_blank">Facebook Group</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mirai Path. All Rights Reserved. Designed with 🌸 for CSE Scholars.</p>
+        <div class="japan-tag">
+          <span>Made for Japan Opportunities</span>
+          <div class="flag-circle"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- SCRIPTS INJECTION --- -->
+  <script src="assets/js/sakura.js"></script>
+  <script src="assets/js/roadmap.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
